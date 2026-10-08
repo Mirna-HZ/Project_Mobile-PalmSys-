@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Palet PalmSys (grand design, template Finance App UI Kit) -->
+    <color name="plum_utama">#4F3D55</color>
+    <color name="plum_kartu">#5C4561</color>
+    <color name="ungu_aksen">#7F4E84</color>
+    <color name="lilac">#9579A1</color>
+    <color name="lilac_muda">#E9DCEE</color>
+    <color name="splash_atas">#56425B</color>
+    <color name="teks_utama">#20293A</color>
+    <color name="teks_sekunder">#949697</color>
 </resources>

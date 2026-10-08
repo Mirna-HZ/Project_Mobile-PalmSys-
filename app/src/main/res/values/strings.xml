@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">NBA-Chitato</string>
+    <string name="app_name">PalmSys</string>
+    <string name="judul_aplikasi">palmsys</string>
+    <string name="tagline">Dompet kebun sawit di genggaman</string>
+    <string name="tombol_snack">MyProject</string>
+    <string name="tombol_web">Website GAPKI</string>
+    <string name="judul_snack">Detail Snack</string>
+    <string name="judul_web">GAPKI</string>
 </resources>
