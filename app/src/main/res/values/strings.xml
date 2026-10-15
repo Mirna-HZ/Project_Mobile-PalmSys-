@@ -6,6 +6,7 @@
     <string name="tombol_web">Website GAPKI</string>
     <string name="judul_snack">Detail Snack</string>
     <string name="judul_web">GAPKI</string>
+    <string name="versi">v1.0</string>
 
     <!-- Halaman login -->
     <string name="judul_masuk">Masuk</string>

@@ -15,9 +15,8 @@
         android:theme="@style/Theme.MRNnabati"> <!-- Pastikan nama tema ini sesuai dengan di themes.xml -->
 
         <activity
-            android:name="com.example.mrn_nabati.MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,6 +25,11 @@
 
         <activity
             android:name=".AuthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.example.mrn_nabati.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
