@@ -6,4 +6,35 @@
     <string name="tombol_web">Website GAPKI</string>
     <string name="judul_snack">Detail Snack</string>
     <string name="judul_web">GAPKI</string>
+    <string name="versi">v1.0</string>
+
+    <!-- Halaman login -->
+    <string name="judul_masuk">Masuk</string>
+    <string name="sub_masuk">Kelola dompet kebun sawitmu</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="hint_username">Masukkan username</string>
+    <string name="hint_password">Masukkan password</string>
+    <string name="tombol_masuk">Masuk</string>
+
+    <!-- Halaman awal -->
+    <string name="tombol_profil">Profil Developer</string>
+    <string name="tombol_keluar">Keluar</string>
+
+    <!-- Profil developer -->
+    <string name="judul_profil">Profil Developer</string>
+    <string name="inisial">M</string>
+    <string name="nama_dev">Mirna</string>
+    <string name="kelas_dev">3 TI F · Politeknik Caltex Riau</string>
+    <string name="peran_dev">Developer PalmSys</string>
+    <string name="label_linkedin">LinkedIn</string>
+    <string name="isi_linkedin">Mirna</string>
+    <string name="label_instagram">Instagram</string>
+    <string name="isi_instagram">@miminaa_04</string>
+    <string name="label_github">GitHub</string>
+    <string name="isi_github">Mirna-HZ</string>
+    <string name="label_hobi">Hobi</string>
+    <string name="isi_hobi">Memasak</string>
+    <string name="label_kekuatan">Kekuatan Terbesar</string>
+    <string name="isi_kekuatan">Belajar giat</string>
 </resources>
