@@ -17,6 +17,10 @@
     <string name="hint_password">Masukkan password</string>
     <string name="tombol_masuk">Masuk</string>
 
+    <!-- Halaman awal -->
+    <string name="tombol_profil">Profil Developer</string>
+    <string name="tombol_keluar">Keluar</string>
+
     <!-- Profil developer -->
     <string name="judul_profil">Profil Developer</string>
     <string name="inisial">M</string>
