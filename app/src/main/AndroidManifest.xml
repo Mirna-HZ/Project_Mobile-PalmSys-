@@ -25,6 +25,11 @@
         </activity>
 
         <activity
+            android:name=".AuthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
             android:name="com.example.mrn_nabati.MainReesultActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

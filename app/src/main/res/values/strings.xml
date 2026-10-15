@@ -6,4 +6,13 @@
     <string name="tombol_web">Website GAPKI</string>
     <string name="judul_snack">Detail Snack</string>
     <string name="judul_web">GAPKI</string>
+
+    <!-- Halaman login -->
+    <string name="judul_masuk">Masuk</string>
+    <string name="sub_masuk">Kelola dompet kebun sawitmu</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="hint_username">Masukkan username</string>
+    <string name="hint_password">Masukkan password</string>
+    <string name="tombol_masuk">Masuk</string>
 </resources>
