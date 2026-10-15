@@ -34,6 +34,10 @@
             android:windowSoftInputMode="adjustResize" />
 
         <activity
+            android:name=".ProfilActivity"
+            android:exported="false" />
+
+        <activity
             android:name="com.example.mrn_nabati.MainReesultActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
