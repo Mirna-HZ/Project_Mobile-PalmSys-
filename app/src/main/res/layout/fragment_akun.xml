@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Akun.AkunFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/plum_utama"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:titleTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAvatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/plum_utama"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/inisial"
+                    android:textColor="@color/white"
+                    android:textSize="28sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textNama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/nama_dev"
+                android:textColor="@color/teks_utama"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/cardAvatar"
+                app:layout_constraintTop_toTopOf="@id/cardAvatar" />
+
+            <TextView
+                android:id="@+id/textKelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/kelas_dev"
+                android:textColor="@color/teks_sekunder"
+                android:textSize="13sp"
+                app:layout_constraintStart_toEndOf="@id/cardAvatar"
+                app:layout_constraintTop_toBottomOf="@id/textNama" />
+
+            <TextView
+                android:id="@+id/textLabelAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/label_akun"
+                android:textColor="@color/teks_utama"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardAvatar" />
+
+            <Button
+                android:id="@+id/btnProfil"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/lilac_muda"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/tombol_profil"
+                android:textColor="@color/plum_utama"
+                android:textSize="15sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_person"
+                app:iconGravity="textStart"
+                app:iconTint="@color/plum_utama"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textLabelAkun" />
+
+            <Button
+                android:id="@+id/btnWebView"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/ungu_aksen"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/tombol_web"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_public"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnProfil" />
+
+            <Button
+                android:id="@+id/btnSnack"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/lilac"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/tombol_snack"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnWebView" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/plum_utama"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/tombol_keluar"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSnack" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
