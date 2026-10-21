@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beranda"
+        android:icon="@drawable/ic_beranda"
+        android:title="@string/menu_beranda" />
+
+    <item
+        android:id="@+id/statistik"
+        android:icon="@drawable/ic_statistik"
+        android:title="@string/menu_statistik" />
+
+    <item
+        android:id="@+id/catat"
+        android:icon="@drawable/ic_catat"
+        android:title="@string/menu_catat" />
+
+    <item
+        android:id="@+id/kantong"
+        android:icon="@drawable/ic_kantong"
+        android:title="@string/menu_kantong" />
+
+    <item
+        android:id="@+id/akun"
+        android:icon="@drawable/ic_akun"
+        android:title="@string/menu_akun" />
+
+</menu>

@@ -37,4 +37,12 @@
     <string name="isi_hobi">Memasak</string>
     <string name="label_kekuatan">Kekuatan Terbesar</string>
     <string name="isi_kekuatan">Belajar giat</string>
+
+    <!-- Bottom Navigation (P7) -->
+    <string name="menu_beranda">Beranda</string>
+    <string name="menu_statistik">Statistik</string>
+    <string name="menu_catat">Catat</string>
+    <string name="menu_kantong">Kantong</string>
+    <string name="menu_akun">Akun</string>
+
 </resources>
