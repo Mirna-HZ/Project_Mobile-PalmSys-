@@ -9,7 +9,7 @@
     <string name="versi">v1.0</string>
 
     <!-- Halaman login -->
-    <string name="judul_masuk">Masuk</string>
+    <string name="judul_masuk">Selamat Datang</string>
     <string name="sub_masuk">Kelola dompet kebun sawitmu</string>
     <string name="label_username">Username</string>
     <string name="label_password">Password</string>

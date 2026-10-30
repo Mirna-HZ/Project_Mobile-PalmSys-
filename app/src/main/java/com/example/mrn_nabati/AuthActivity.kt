@@ -24,14 +24,29 @@ class AuthActivity : AppCompatActivity() {
             insets
         }
 
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        // Status login (dibaca SplashScreenActivity)
+        val sessionPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        // Data hasil registrasi (disimpan RegisterActivity)
+        val registerPref = getSharedPreferences("UserPref", MODE_PRIVATE)
+
+        binding.btnRegisterGmail.setOnClickListener {
+            startActivity(Intent(this, EmailActivity::class.java))
+        }
 
         binding.btnLogin.setOnClickListener {
-            val username = binding.inputUsername.text.toString()
+            val username = binding.inputUsername.text.toString().trim()
             val password = binding.inputPassword.text.toString()
 
-            if (username == password) {
-                val editor = sharedPref.edit()
+            val savedUsername = registerPref.getString("username", null)
+            val savedPassword = registerPref.getString("password", null)
+
+            val rule1 = username == password
+            val rule2 = savedUsername != null &&
+                    username == savedUsername &&
+                    password == savedPassword
+
+            if (username.isNotEmpty() && (rule1 || rule2)) {
+                val editor = sessionPref.edit()
                 editor.putBoolean("isLogin", true)
                 editor.putString("username", username)
                 editor.apply()
@@ -40,7 +55,8 @@ class AuthActivity : AppCompatActivity() {
                 finish()
             } else {
                 MaterialAlertDialogBuilder(this)
-                    .setMessage("Silahkan coba lagi")
+                    .setTitle("Login Gagal")
+                    .setMessage("Username atau password salah.")
                     .setPositiveButton("OK") { dialog, _ ->
                         dialog.dismiss()
                     }
