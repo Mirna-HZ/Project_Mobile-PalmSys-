@@ -31,13 +31,27 @@ class SplashScreenActivity : AppCompatActivity() {
         lifecycleScope.launch {
             delay(2000) //simulasi pengambilan data selama 2 detik
 
-            val isLogin = false
-            var intent = Intent(this@SplashScreenActivity, AuthActivity::class.java)
-            if (isLogin) {
-                intent = Intent(this@SplashScreenActivity, BaseActivity::class.java)
+            val isLogin = sharedPref.getBoolean("isLogin", false)
+            val biometrikAktif = sharedPref.getBoolean("biometricEnabled", false)
+
+            if (isLogin && biometrikAktif && BiometricHelper.isAvailable(this@SplashScreenActivity)) {
+                BiometricHelper.authenticate(
+                    activity = this@SplashScreenActivity,
+                    title = "Verifikasi Identitas",
+                    subtitle = "Gunakan sidik jari atau wajah untuk membuka aplikasi",
+                    onSuccess = { bukaHalaman(BaseActivity::class.java) },
+                    onFailed = { bukaHalaman(AuthActivity::class.java) }
+                )
+            } else if (isLogin) {
+                bukaHalaman(BaseActivity::class.java)
+            } else {
+                bukaHalaman(AuthActivity::class.java)
             }
-            startActivity(intent)
-            finish()
         }
+    }
+
+    private fun bukaHalaman(tujuan: Class<*>) {
+        startActivity(Intent(this, tujuan))
+        finish()
     }
 }

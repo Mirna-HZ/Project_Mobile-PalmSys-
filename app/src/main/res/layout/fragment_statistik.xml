@@ -376,9 +376,25 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent" />
 
+                    <!-- Tombol lama di dalam kartu SUDAH DIHAPUS dari sini -->
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- (FITUR 2: EKSPOR PDF)  -->
+            <Button
+                android:id="@+id/btnUnduhPdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="20dp"
+                android:text="Unduh Laporan PDF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardKategori3" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

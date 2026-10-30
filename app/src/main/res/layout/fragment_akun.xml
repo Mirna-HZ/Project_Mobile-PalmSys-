@@ -149,6 +149,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btnWebView" />
 
+            <!-- awal switch biometrik -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBiometric"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="20dp"
+                android:minHeight="52dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/tombol_biometrik"
+                android:textColor="@color/teks_utama"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSnack" />
+            <!-- akhir switch biometrik -->
+
+
             <Button
                 android:id="@+id/btnLogout"
                 android:layout_width="0dp"
@@ -167,7 +186,8 @@
                 app:iconTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnSnack" />
+                app:layout_constraintTop_toBottomOf="@id/switchBiometric" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

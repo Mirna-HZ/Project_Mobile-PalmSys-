@@ -96,4 +96,6 @@
     <string name="ket_kantong_upah">Gaji pemanen dan perawatan</string>
     <string name="saldo_kantong_upah">Rp1.500.000</string>
     <string name="label_akun">Lainnya</string>
+
+    <string name="tombol_biometrik">Kunci aplikasi dengan sidik jari / wajah</string>
 </resources>
