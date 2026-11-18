@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Header gelombang plum di atas Beranda -->
+    <path
+        android:fillColor="@color/plum_utama"
+        android:pathData="
+            M0,0
+            L100,0
+            L100,62
+            Q75,90 50,70
+            T0,66
+            Z" />
+
+</vector>

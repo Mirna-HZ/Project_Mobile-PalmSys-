@@ -31,20 +31,44 @@
             android:layout_height="wrap_content"
             android:paddingBottom="24dp">
 
+            <!-- Header gelombang (background drawable) -->
+            <View
+                android:id="@+id/viewHeader"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:background="@drawable/bg_header_beranda"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textHalo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Halo"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Kartu saldo menimpa header -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardSaldo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="@color/plum_utama"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
                 app:strokeWidth="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/textHalo">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -52,27 +76,15 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/textHalo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="Halo"
-                        android:textColor="@color/lilac_muda"
-                        android:textSize="15sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
                         android:id="@+id/textLabelSaldo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
                         android:fontFamily="@font/inter_regular"
                         android:text="@string/label_saldo"
-                        android:textColor="@color/lilac_muda"
+                        android:textColor="@color/teks_sekunder"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/textHalo" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/textSaldo"
@@ -81,7 +93,7 @@
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="@string/isi_saldo"
-                        android:textColor="@color/white"
+                        android:textColor="@color/plum_utama"
                         android:textSize="30sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textLabelSaldo" />
@@ -93,7 +105,7 @@
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/inter_regular"
                         android:text="@string/ket_saldo"
-                        android:textColor="@color/lilac_muda"
+                        android:textColor="@color/lilac"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textSaldo" />
@@ -103,197 +115,172 @@
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
-                android:id="@+id/textLabelAktivitas"
+                android:id="@+id/textLabelMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
                 android:fontFamily="@font/inter_bold"
-                android:text="@string/label_aktivitas"
+                android:text="@string/label_menu"
                 android:textColor="@color/teks_utama"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardSaldo" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardAktivitas1"
+            <!-- Menu grid 3 kolom x 2 baris -->
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridMenu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/lilac_muda"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                app:columnCount="3"
+                app:useDefaultMargins="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textLabelAktivitas">
+                app:layout_constraintTop_toBottomOf="@id/textLabelMenu">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuCatat"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:backgroundTint="@color/lilac_muda"
+                    android:fontFamily="@font/inter_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/menu_catat"
+                    android:textColor="@color/plum_utama"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_catat"
+                    app:iconGravity="top"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/plum_utama"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
 
-                    <TextView
-                        android:id="@+id/textAktivitas1Judul"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="@string/aktivitas1_judul"
-                        android:textColor="@color/teks_utama"
-                        android:textSize="15sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuKantong"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:backgroundTint="@color/lilac_muda"
+                    android:fontFamily="@font/inter_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/menu_kantong"
+                    android:textColor="@color/plum_utama"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_kantong"
+                    app:iconGravity="top"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/plum_utama"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
 
-                    <TextView
-                        android:id="@+id/textAktivitas1Ket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/inter_regular"
-                        android:text="@string/aktivitas1_ket"
-                        android:textColor="@color/teks_sekunder"
-                        android:textSize="13sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/textAktivitas1Judul" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuStatistik"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:backgroundTint="@color/lilac_muda"
+                    android:fontFamily="@font/inter_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/menu_statistik"
+                    android:textColor="@color/plum_utama"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_statistik"
+                    app:iconGravity="top"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/plum_utama"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
 
-                    <TextView
-                        android:id="@+id/textAktivitas1Nominal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="@string/aktivitas1_nominal"
-                        android:textColor="@color/ungu_aksen"
-                        android:textSize="15sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuAkun"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:backgroundTint="@color/lilac_muda"
+                    android:fontFamily="@font/inter_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/menu_akun"
+                    android:textColor="@color/plum_utama"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_akun"
+                    app:iconGravity="top"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/plum_utama"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuGapki"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:backgroundTint="@color/lilac_muda"
+                    android:fontFamily="@font/inter_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/menu_gapki"
+                    android:textColor="@color/plum_utama"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_public"
+                    app:iconGravity="top"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/plum_utama"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
 
-            </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMenuProfil"
+                    android:layout_width="0dp"
+                    android:layout_height="88dp"
+                    android:backgroundTint="@color/lilac_muda"
+                    android:fontFamily="@font/inter_bold"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/menu_profil"
+                    android:textColor="@color/plum_utama"
+                    android:textSize="12sp"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/ic_person"
+                    app:iconGravity="top"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/plum_utama"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill_horizontal" />
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardAktivitas2"
-                android:layout_width="0dp"
+            </androidx.gridlayout.widget.GridLayout>
+
+            <TextView
+                android:id="@+id/textLabelAktivitas"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/lilac_muda"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/label_aktivitas"
+                android:textColor="@color/teks_utama"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardAktivitas1">
+                app:layout_constraintTop_toBottomOf="@id/gridMenu" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/textAktivitas2Judul"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="@string/aktivitas2_judul"
-                        android:textColor="@color/teks_utama"
-                        android:textSize="15sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textAktivitas2Ket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/inter_regular"
-                        android:text="@string/aktivitas2_ket"
-                        android:textColor="@color/teks_sekunder"
-                        android:textSize="13sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/textAktivitas2Judul" />
-
-                    <TextView
-                        android:id="@+id/textAktivitas2Nominal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="@string/aktivitas2_nominal"
-                        android:textColor="@color/teks_utama"
-                        android:textSize="15sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardAktivitas3"
+            <!-- Daftar aktivitas memakai RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAktivitas"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="1dp"
-                app:strokeColor="@color/lilac_muda"
+                android:layout_marginTop="4dp"
+                android:nestedScrollingEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardAktivitas2">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/textAktivitas3Judul"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="@string/aktivitas3_judul"
-                        android:textColor="@color/teks_utama"
-                        android:textSize="15sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textAktivitas3Ket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/inter_regular"
-                        android:text="@string/aktivitas3_ket"
-                        android:textColor="@color/teks_sekunder"
-                        android:textSize="13sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/textAktivitas3Judul" />
-
-                    <TextView
-                        android:id="@+id/textAktivitas3Nominal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_bold"
-                        android:text="@string/aktivitas3_nominal"
-                        android:textColor="@color/teks_utama"
-                        android:textSize="15sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </com.google.android.material.card.MaterialCardView>
+                app:layout_constraintTop_toBottomOf="@id/textLabelAktivitas"
+                tools:listitem="@layout/item_transaksi" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
