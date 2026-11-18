@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import com.example.mrn_nabati.OnBoarding.OnBoardingActivity
 import com.example.mrn_nabati.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -33,8 +34,12 @@ class SplashScreenActivity : AppCompatActivity() {
 
             val isLogin = sharedPref.getBoolean("isLogin", false)
             val biometrikAktif = sharedPref.getBoolean("biometricEnabled", false)
+            val onBoardingSelesai = sharedPref.getBoolean("onboardingSelesai", false)
 
-            if (isLogin && biometrikAktif && BiometricHelper.isAvailable(this@SplashScreenActivity)) {
+            if (!onBoardingSelesai) {
+                // Pertama kali aplikasi dibuka: tampilkan On Board Screen
+                bukaHalaman(OnBoardingActivity::class.java)
+            } else if (isLogin && biometrikAktif && BiometricHelper.isAvailable(this@SplashScreenActivity)) {
                 BiometricHelper.authenticate(
                     activity = this@SplashScreenActivity,
                     title = "Verifikasi Identitas",
