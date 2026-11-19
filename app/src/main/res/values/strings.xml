@@ -98,4 +98,19 @@
     <string name="label_akun">Lainnya</string>
 
     <string name="tombol_biometrik">Kunci aplikasi dengan sidik jari / wajah</string>
+
+    <!-- On Board Screen (P11) -->
+    <string name="onboarding1_judul">Catat Hasil Kebun Sawit</string>
+    <string name="onboarding1_ket">Penjualan TBS, upah pemanen, dan pembelian pupuk dicatat di satu tempat tanpa buku tulis.</string>
+    <string name="onboarding2_judul">Pisahkan Uang per Kantong</string>
+    <string name="onboarding2_ket">Uang hasil panen dibagi ke kantong panen, pupuk, dan upah supaya tidak tercampur.</string>
+    <string name="onboarding3_judul">Pantau Untung Tiap Bulan</string>
+    <string name="onboarding3_ket">Ringkasan pemasukan dan pengeluaran tampil setiap bulan dan bisa diunduh sebagai PDF.</string>
+    <string name="tombol_lewati">Lewati</string>
+    <string name="tombol_lanjut">Lanjut</string>
+
+    <!-- Beranda (P11) -->
+    <string name="label_menu">Menu</string>
+    <string name="menu_gapki">GAPKI</string>
+    <string name="menu_profil">Profil</string>
 </resources>
