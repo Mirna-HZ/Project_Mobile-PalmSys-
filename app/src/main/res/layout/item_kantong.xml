@@ -25,40 +25,26 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
-            <ImageView
-                android:id="@+id/imgKantong"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:contentDescription="Ikon kantong"
-                android:src="@drawable/ic_kantong"
-                app:tint="@color/lilac_muda"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/textNama"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:fontFamily="@font/inter_bold"
                 android:text="nama_kantong"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintEnd_toStartOf="@id/imgKantong"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textKeterangan"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:layout_marginEnd="8dp"
                 android:fontFamily="@font/inter_regular"
                 android:text="keterangan_kantong"
                 android:textColor="@color/lilac_muda"
                 android:textSize="13sp"
-                app:layout_constraintEnd_toStartOf="@id/imgKantong"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textNama" />
 

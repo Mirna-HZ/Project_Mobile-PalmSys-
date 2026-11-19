@@ -31,60 +31,50 @@
             android:layout_height="wrap_content"
             android:paddingBottom="24dp">
 
-            <!-- Header gelombang (background drawable) -->
-            <View
-                android:id="@+id/viewHeader"
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:background="@drawable/bg_header_beranda"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textHalo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter_bold"
-                android:text="Halo"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- Kartu saldo menimpa header -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardSaldo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/plum_utama"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
                 app:strokeWidth="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textHalo">
+                app:layout_constraintTop_toTopOf="parent">
 
+                <!-- Background kartu memakai drawable bg_kartu_saldo -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/bg_kartu_saldo"
                     android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/textHalo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="Halo"
+                        android:textColor="@color/lilac_muda"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/textLabelSaldo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
                         android:fontFamily="@font/inter_regular"
                         android:text="@string/label_saldo"
-                        android:textColor="@color/teks_sekunder"
+                        android:textColor="@color/lilac_muda"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@id/textHalo" />
 
                     <TextView
                         android:id="@+id/textSaldo"
@@ -93,7 +83,7 @@
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/nunito_black"
                         android:text="@string/isi_saldo"
-                        android:textColor="@color/plum_utama"
+                        android:textColor="@color/white"
                         android:textSize="30sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textLabelSaldo" />
@@ -105,7 +95,7 @@
                         android:layout_marginTop="4dp"
                         android:fontFamily="@font/inter_regular"
                         android:text="@string/ket_saldo"
-                        android:textColor="@color/lilac"
+                        android:textColor="@color/lilac_muda"
                         android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textSaldo" />
@@ -118,8 +108,8 @@
                 android:id="@+id/textLabelMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
                 android:fontFamily="@font/inter_bold"
                 android:text="@string/label_menu"
                 android:textColor="@color/teks_utama"
@@ -127,7 +117,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardSaldo" />
 
-            <!-- Menu grid 3 kolom x 2 baris -->
+            <!-- Menu grid 3 kolom x 2 baris, gaya tombol sama dengan halaman Akun -->
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridMenu"
                 android:layout_width="0dp"
@@ -144,7 +134,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMenuCatat"
                     android:layout_width="0dp"
-                    android:layout_height="88dp"
+                    android:layout_height="84dp"
                     android:backgroundTint="@color/lilac_muda"
                     android:fontFamily="@font/inter_bold"
                     android:insetTop="0dp"
@@ -152,10 +142,10 @@
                     android:text="@string/menu_catat"
                     android:textColor="@color/plum_utama"
                     android:textSize="12sp"
-                    app:cornerRadius="12dp"
+                    app:cornerRadius="8dp"
                     app:icon="@drawable/ic_catat"
                     app:iconGravity="top"
-                    app:iconSize="28dp"
+                    app:iconSize="26dp"
                     app:iconTint="@color/plum_utama"
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
@@ -163,7 +153,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMenuKantong"
                     android:layout_width="0dp"
-                    android:layout_height="88dp"
+                    android:layout_height="84dp"
                     android:backgroundTint="@color/lilac_muda"
                     android:fontFamily="@font/inter_bold"
                     android:insetTop="0dp"
@@ -171,10 +161,10 @@
                     android:text="@string/menu_kantong"
                     android:textColor="@color/plum_utama"
                     android:textSize="12sp"
-                    app:cornerRadius="12dp"
+                    app:cornerRadius="8dp"
                     app:icon="@drawable/ic_kantong"
                     app:iconGravity="top"
-                    app:iconSize="28dp"
+                    app:iconSize="26dp"
                     app:iconTint="@color/plum_utama"
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
@@ -182,7 +172,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMenuStatistik"
                     android:layout_width="0dp"
-                    android:layout_height="88dp"
+                    android:layout_height="84dp"
                     android:backgroundTint="@color/lilac_muda"
                     android:fontFamily="@font/inter_bold"
                     android:insetTop="0dp"
@@ -190,10 +180,10 @@
                     android:text="@string/menu_statistik"
                     android:textColor="@color/plum_utama"
                     android:textSize="12sp"
-                    app:cornerRadius="12dp"
+                    app:cornerRadius="8dp"
                     app:icon="@drawable/ic_statistik"
                     app:iconGravity="top"
-                    app:iconSize="28dp"
+                    app:iconSize="26dp"
                     app:iconTint="@color/plum_utama"
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
@@ -201,7 +191,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMenuAkun"
                     android:layout_width="0dp"
-                    android:layout_height="88dp"
+                    android:layout_height="84dp"
                     android:backgroundTint="@color/lilac_muda"
                     android:fontFamily="@font/inter_bold"
                     android:insetTop="0dp"
@@ -209,10 +199,10 @@
                     android:text="@string/menu_akun"
                     android:textColor="@color/plum_utama"
                     android:textSize="12sp"
-                    app:cornerRadius="12dp"
+                    app:cornerRadius="8dp"
                     app:icon="@drawable/ic_akun"
                     app:iconGravity="top"
-                    app:iconSize="28dp"
+                    app:iconSize="26dp"
                     app:iconTint="@color/plum_utama"
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
@@ -220,7 +210,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMenuGapki"
                     android:layout_width="0dp"
-                    android:layout_height="88dp"
+                    android:layout_height="84dp"
                     android:backgroundTint="@color/lilac_muda"
                     android:fontFamily="@font/inter_bold"
                     android:insetTop="0dp"
@@ -228,10 +218,10 @@
                     android:text="@string/menu_gapki"
                     android:textColor="@color/plum_utama"
                     android:textSize="12sp"
-                    app:cornerRadius="12dp"
+                    app:cornerRadius="8dp"
                     app:icon="@drawable/ic_public"
                     app:iconGravity="top"
-                    app:iconSize="28dp"
+                    app:iconSize="26dp"
                     app:iconTint="@color/plum_utama"
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
@@ -239,7 +229,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMenuProfil"
                     android:layout_width="0dp"
-                    android:layout_height="88dp"
+                    android:layout_height="84dp"
                     android:backgroundTint="@color/lilac_muda"
                     android:fontFamily="@font/inter_bold"
                     android:insetTop="0dp"
@@ -247,10 +237,10 @@
                     android:text="@string/menu_profil"
                     android:textColor="@color/plum_utama"
                     android:textSize="12sp"
-                    app:cornerRadius="12dp"
+                    app:cornerRadius="8dp"
                     app:icon="@drawable/ic_person"
                     app:iconGravity="top"
-                    app:iconSize="28dp"
+                    app:iconSize="26dp"
                     app:iconTint="@color/plum_utama"
                     app:layout_columnWeight="1"
                     app:layout_gravity="fill_horizontal" />
@@ -261,8 +251,8 @@
                 android:id="@+id/textLabelAktivitas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
                 android:fontFamily="@font/inter_bold"
                 android:text="@string/label_aktivitas"
                 android:textColor="@color/teks_utama"
@@ -270,7 +260,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/gridMenu" />
 
-            <!-- Daftar aktivitas memakai RecyclerView -->
+            <!-- Daftar aktivitas memakai RecyclerView (kartu sama dengan desain asli) -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvAktivitas"
                 android:layout_width="0dp"
