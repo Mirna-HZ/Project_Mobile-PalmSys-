@@ -31,6 +31,16 @@
             android:layout_height="wrap_content"
             android:paddingBottom="24dp">
 
+            <!-- Header gelombang (background drawable) di belakang kartu saldo -->
+            <View
+                android:id="@+id/viewHeader"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:background="@drawable/bg_header_beranda"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardSaldo"
                 android:layout_width="0dp"
